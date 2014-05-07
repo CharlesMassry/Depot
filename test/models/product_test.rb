@@ -52,6 +52,6 @@ class ProductTest < ActiveSupport::TestCase
   												image_url: 		"fred.gif")
   	assert product.invalid?
   	assert_equal ["has already been taken"], product.errors[:title]
-  	assert_equal [I18n.translate('errors.messages.taken')], product.errors[:title]
+  	assert_equal [I18n.translate('errors.messages.taken')], product.errors[:title]  # capital-letter i, number 18, letter n
   end
 end
